@@ -1,0 +1,60 @@
+swagger: '2.0'
+info:
+  description: This is an API for gyms to keep track of member activities
+  version: 1.0.0
+  title: Gym Membership API
+  # put the contact info for your development or API team
+  contact:
+    email: you@your-company.com
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+# tags are used for organizing operations
+tags:
+- name: admins
+  description: Secured Admin-only calls
+- name: developers
+  description: Operations available to regular developers
+
+paths:
+  /scan_in/nth:
+    get:
+      summary: Gets nth scan inforamtion
+      description: Gets nth scan inforamtion
+      operationId: app.get_scan_in_nth
+      parameters:
+      - in: query
+        name: n
+        type: number
+        required: true
+      responses:
+        200:
+          description: OK
+        400:
+          description: bad input parameter
+
+
+
+  /body_info/average:
+    get:
+      summary: Gets the average weight from member inforamtion
+      description: Gets the average weight from member inforamtion
+      operationId: app.get_body_info_average
+      parameters:
+      - in: query
+        name: startDate
+        type: string
+        required: true
+        format: date-time
+      - in: query
+        name: endDate
+        type: string
+        required: true
+        format: date-time
+      responses:
+        200:
+          description: OK
+        400:
+          description: bad input parameter
