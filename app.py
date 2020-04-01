@@ -1,5 +1,4 @@
 import connexion
-from datetime import datetime
 import yaml
 import json
 import dateutil.parser
