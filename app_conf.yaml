@@ -1,5 +1,5 @@
 version: 1
 kafka:
-  server: localhost
+  server: acit3855-shaun.westus2.cloudapp.azure.com
   port: 9092
   topic: events
